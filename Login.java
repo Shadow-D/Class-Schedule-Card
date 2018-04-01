@@ -37,8 +37,8 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 public class Login {
-	protected static String baseUrl="http://jxglstu.hfut.edu.cn/eams5-student/";
-	protected static CloseableHttpClient login=HttpClients.createDefault();
+	protected static String baseUrl="http://jxglstu.hfut.edu.cn/eams5-student/";// 網站url
+	protected static CloseableHttpClient login=HttpClients.createDefault();// http請求
 	protected static ArrayList<String[]> weekDay=new ArrayList<>();// 周几
 	protected static ArrayList<String[]> turns=new ArrayList<>();// 第几节
 	protected static ArrayList<String[]> room=new ArrayList<>();// 上课地点
@@ -50,7 +50,7 @@ public class Login {
 	protected static JSONObject result=new JSONObject();// 存放返回的json数据
 	protected static String code, semester, startDate, nowWeek;// 存放返回的字符串,學期,開始時間,當前周
 	protected static SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");// 日期格式
-	protected static CloseableHttpResponse response;
+	protected static CloseableHttpResponse response;// http返回
 	protected static Date nowDate=new Date();// 當前時間
 	protected static boolean isLogin=false;// 登錄標誌
 	protected static int semesterId;// 學期數,粗略計算,以實際爲準,2018年上學期爲33,106行修改
