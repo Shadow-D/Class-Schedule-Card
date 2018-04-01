@@ -92,7 +92,7 @@ public class Login {
 		HttpGet classGet;
 		JSONArray lessons;
 		
-		// 通过自动跳转获取学生id
+		// 通过302的location获取学生id
 		nextGet.setConfig(RequestConfig.custom().setRedirectsEnabled(false).build());// 禁止自动跳转
 		response=login.execute(nextGet);
 		String newUrl=response.getFirstHeader("Location").toString();
